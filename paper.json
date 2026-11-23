@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24414716",
     "current_version": 3,
-    "doi": null,
+    "doi": "10.5281/zenodo.24414717",
     "lean_source": {
       "revision": "42aeb4e95344fb1ea9d2042d02ff1a5589faaacb",
       "url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Quantum/QuantumChannels/FractionalEvolutionPhaseObstruction.lean"
