@@ -1,0 +1,23 @@
+{
+  "id": "liu-wesolowski-2026-ordinary-fractional-evolution",
+  "revision": 3,
+  "problem_ids": ["liu-wesolowski-2026-ordinary-fractional-evolution"],
+  "topic": "The uncontrolled-access question for prescribed-branch fractional quantum evolution",
+  "title": "Quantitative extensions of Araújo et al.'s phase obstruction for Liu, Wesołowski, Thompson, Gu and Pira's uncontrolled fractional-evolution question",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Extending Araújo, Feix, Costa and Brukner's global-phase argument (2014), we answer negatively the question in Liu, Wesołowski, Thompson, Gu and Pira, Optimal query complexity for fractional quantum evolution, arXiv:2610.01940v1 (1 October 2026), Section V, page 7, unnumbered Uncontrolled access paragraph, with its prescribed branch and uniform channel criterion. For 0<t<1, 0<delta<pi and every dimension d>=2, ordinary queries have an unhalved diamond-error floor sin(pi*t), independent of their number. Retaining a pure full output strengthens the bound to 2*sin(pi*min(t,1-t)/2). The same argument gives the endpoint order of the best attainable error and classifies continuously differentiable phase functions on this branch: arbitrarily accurate ordinary-access implementation is possible exactly for integer powers, up to a constant phase.",
+  "summary": "An admissible sign pair answers the ordinary-access question negatively. Written proofs extend the gap range to 0<delta<pi and all d>=2, strengthen the pure full-output bound, establish the endpoint order of the best error, and classify C1 ordinary-access phase transformations. Controlled-access and Haar-average complexity remain separate.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Quantum/QuantumChannels/FractionalEvolutionPhaseObstruction.lean",
+  "posing_source_url": "https://arxiv.org/abs/2610.01940v1",
+  "posing_locator": "Section V, page 7, unnumbered Uncontrolled access paragraph; Definitions 1–3 and Appendix B",
+  "formal_declaration": "Trureturing.OpenProblems.FractionalEvolutionPhase.result",
+  "formal_statement": "Not Trureturing.OpenProblems.FractionalEvolutionPhase.claim",
+  "formal_scope": "Negation of the universal ordinary-query upper-bound assertion through d=2, t=delta=1/2, epsilon=1/4, arbitrary finite nonzero workspace, fixed signed ordinary queries and full initialized outputs with the unhalved stabilized norm. The concrete logarithms have phases pi/2 and 3*pi/2.",
+  "written_proof_scope": "For 0<t<1, 0<delta<pi and every d>=2, all finite ordinary circuits have error at least sin(pi*t), including deterministic channel algorithms without an oracle-dependent auxiliary input. Pure full-output circuits satisfy the stronger bound 2*sin(pi*min(t,1-t)/2). Their best error is Theta(min(t,1-t)). A C1 real phase function on [delta,2*pi) admits arbitrarily accurate ordinary-access implementation exactly when f(theta)=m*theta+b for integer m.",
+  "finite_check_scope": "The square-root witness and 93 Gaussian-rational circuit cases from the fixed two-dimensional setting, plus 90 circuit cases with system dimensions 2–4, workspace dimensions 1–2 and all sign words of lengths 0–3. Additional exact checks cover extended target projectors, four normalized gap examples and 27 polynomial finite-difference examples. Universal bounds and the C1 classification have written proofs.",
+  "attribution": "Araújo et al. (2013 preprint; 2014 journal) supply the global-phase obstruction. Sheridan et al. (2008 preprint; 2009 journal) distinguish controlled and eigenphase-relative access. Gavorová et al. (2020 preprint; 2024 journal) prove an all-domain root obstruction. Liu et al. (2026) already state the identity/one-query endpoint upper estimate. The promised-pair bounds and classification are explicit deductions, with no priority claim."
+}

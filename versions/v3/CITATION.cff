@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, cite it."
+title: "Quantitative extensions of Araújo et al.'s phase obstruction for Liu, Wesołowski, Thompson, Gu and Pira's uncontrolled fractional-evolution question"
+authors:
+  - name: "Haobo Ma"
+  - name: "Wenlin Zhang"
+date-released: "2026-11-23"
+version: "3"
+url: "https://mathesis-omega-research.apps.chrono-ai.fun/papers/liu-wesolowski-2026-ordinary-fractional-evolution?version=3"
+license: "CC-BY-4.0"

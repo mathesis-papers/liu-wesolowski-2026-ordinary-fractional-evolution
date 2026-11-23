@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 84653,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "b73efb9322e7de640e078e7a1900861a5be3a9bf1906fc54245a008e80c864c4",
+      "sha256": "b73efb9322e7de640e078e7a1900861a5be3a9bf1906fc54245a008e80c864c4"
+    },
+    "source": {
+      "bytes": 18303,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "a638cb269a33dd53551fbb07032f43474af1bf3e4a3a6983688be6851b6fa733",
+      "sha256": "a638cb269a33dd53551fbb07032f43474af1bf3e4a3a6983688be6851b6fa733"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Extending Araújo, Feix, Costa and Brukner's global-phase argument (2014), we answer negatively the question in Liu, Wesołowski, Thompson, Gu and Pira, Optimal query complexity for fractional quantum evolution, arXiv:2610.01940v1 (1 October 2026), Section V, page 7, unnumbered Uncontrolled access paragraph, with its prescribed branch and uniform channel criterion. For 0<t<1, 0<delta<pi and every dimension d>=2, ordinary queries have an unhalved diamond-error floor sin(pi*t), independent of their number. Retaining a pure full output strengthens the bound to 2*sin(pi*min(t,1-t)/2). The same argument gives the endpoint order of the best attainable error and classifies continuously differentiable phase functions on this branch: arbitrarily accurate ordinary-access implementation is possible exactly for integer powers, up to a constant phase.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 3,
+    "doi": null,
+    "lean_source": {
+      "revision": "42aeb4e95344fb1ea9d2042d02ff1a5589faaacb",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Quantum/QuantumChannels/FractionalEvolutionPhaseObstruction.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 84653,
+      "sha256": "b73efb9322e7de640e078e7a1900861a5be3a9bf1906fc54245a008e80c864c4",
+      "url": "/api/v1/collected-papers/liu-wesolowski-2026-ordinary-fractional-evolution/files/pdf?version=3"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-23T16:38:19.843660674Z",
+    "record": "liu-wesolowski-2026-ordinary-fractional-evolution",
+    "repository_name": "liu-wesolowski-2026-ordinary-fractional-evolution",
+    "source": {
+      "bytes": 18303,
+      "sha256": "a638cb269a33dd53551fbb07032f43474af1bf3e4a3a6983688be6851b6fa733",
+      "url": "/api/v1/collected-papers/liu-wesolowski-2026-ordinary-fractional-evolution/files/source?version=3"
+    },
+    "title": "Quantitative extensions of Araújo et al.'s phase obstruction for Liu, Wesołowski, Thompson, Gu and Pira's uncontrolled fractional-evolution question",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-23T16:38:19.843660674Z",
+        "revision": "3",
+        "version": 3
+      }
+    ],
+    "work": "liu-wesolowski-2026-ordinary-fractional-evolution"
+  }
+}

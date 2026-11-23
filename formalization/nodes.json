@@ -1,0 +1,229 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:liu-wesolowski-2026-ordinary-fractional-evolution:3:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "42aeb4e95344fb1ea9d2042d02ff1a5589faaacb",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Quantum/QuantumChannels/FractionalEvolutionPhaseObstruction.lean"
+      },
+      "lineage": "collected:liu-wesolowski-2026-ordinary-fractional-evolution:s1",
+      "macros": {
+        "\\A": "\\mathcal A",
+        "\\E": "\\mathcal E",
+        "\\bra": "\\langle #1\\rvert",
+        "\\id": "\\mathrm{id}",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\spec": "\\operatorname{spec}",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "liu-wesolowski-2026-ordinary-fractional-evolution",
+      "scope": "in_scope",
+      "statement": "Fix $0<t<1$, $0<\\delta<\\pi$ and $d\\geq2$.\nEvery circuit~\\eqref{eq:circuit} satisfies\n\\[\n e(\\A;t,\\delta)\\geq\\sin(\\pi t).\n\\]\nThe same lower bound holds for a deterministic algorithm built from ordinary\noracle channels, oracle-independent quantum operations and classical\nconditioning, when its system output is compared to $\\E_{e^{itH}}$.\nNo oracle-dependent auxiliary input is supplied in either model.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Quantitative extensions of Araújo et al.'s phase obstruction for Liu, Wesołowski, Thompson, Gu and Pira's uncontrolled fractional-evolution question",
+      "toolchain": null,
+      "version": 3,
+      "work": "liu-wesolowski-2026-ordinary-fractional-evolution"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:liu-wesolowski-2026-ordinary-fractional-evolution:3:s2",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "42aeb4e95344fb1ea9d2042d02ff1a5589faaacb",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Quantum/QuantumChannels/FractionalEvolutionPhaseObstruction.lean"
+      },
+      "lineage": "collected:liu-wesolowski-2026-ordinary-fractional-evolution:s2",
+      "macros": {
+        "\\A": "\\mathcal A",
+        "\\E": "\\mathcal E",
+        "\\bra": "\\langle #1\\rvert",
+        "\\id": "\\mathrm{id}",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\spec": "\\operatorname{spec}",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "liu-wesolowski-2026-ordinary-fractional-evolution",
+      "scope": "in_scope",
+      "statement": "In the full-output unitary-circuit model~\\eqref{eq:circuit}, put\n$s=\\min\\{t,1-t\\}$. Under Theorem~\\ref{thm:floor}'s hypotheses,\n\\[\n e(\\A;t,\\delta)\\geq \\sqrt{2-2|\\cos(\\pi t)|}\n =2\\sin(\\pi s/2).\n\\]\nIn particular the square-root error is at least $\\sqrt2$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Quantitative extensions of Araújo et al.'s phase obstruction for Liu, Wesołowski, Thompson, Gu and Pira's uncontrolled fractional-evolution question",
+      "toolchain": null,
+      "version": 3,
+      "work": "liu-wesolowski-2026-ordinary-fractional-evolution"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:liu-wesolowski-2026-ordinary-fractional-evolution:3:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "42aeb4e95344fb1ea9d2042d02ff1a5589faaacb",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Quantum/QuantumChannels/FractionalEvolutionPhaseObstruction.lean"
+      },
+      "lineage": "collected:liu-wesolowski-2026-ordinary-fractional-evolution:s3",
+      "macros": {
+        "\\A": "\\mathcal A",
+        "\\E": "\\mathcal E",
+        "\\bra": "\\langle #1\\rvert",
+        "\\id": "\\mathrm{id}",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\spec": "\\operatorname{spec}",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "liu-wesolowski-2026-ordinary-fractional-evolution",
+      "scope": "in_scope",
+      "statement": "The ordinary-access question in Section V of~\\cite{liu} has answer no:\nthere is no arbitrarily accurate uniform implementation, and hence no\nmatching uniform query upper bound. At $d=2$, $t=\\delta=1/2$ and\n$\\varepsilon=1/4$, no finite ordinary-query circuit succeeds.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Quantitative extensions of Araújo et al.'s phase obstruction for Liu, Wesołowski, Thompson, Gu and Pira's uncontrolled fractional-evolution question",
+      "toolchain": null,
+      "version": 3,
+      "work": "liu-wesolowski-2026-ordinary-fractional-evolution"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:liu-wesolowski-2026-ordinary-fractional-evolution:3:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "42aeb4e95344fb1ea9d2042d02ff1a5589faaacb",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Quantum/QuantumChannels/FractionalEvolutionPhaseObstruction.lean"
+      },
+      "lineage": "collected:liu-wesolowski-2026-ordinary-fractional-evolution:s4",
+      "macros": {
+        "\\A": "\\mathcal A",
+        "\\E": "\\mathcal E",
+        "\\bra": "\\langle #1\\rvert",
+        "\\id": "\\mathrm{id}",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\spec": "\\operatorname{spec}",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "liu-wesolowski-2026-ordinary-fractional-evolution",
+      "scope": "in_scope",
+      "statement": "Let $E_*(t,\\delta,d)$ be the infimum of~\\eqref{eq:error} over all finite\ncircuits, all finite workspaces and all query counts. If\n$d\\geq2$, $0<\\delta<\\pi$ and $0<t<1$, then\n\\[\n 2\\sin(\\pi s/2)\\leq E_*(t,\\delta,d)\n \\leq\\min\\{2,(2\\pi-\\delta)s\\},\\qquad s=\\min\\{t,1-t\\}.\n\\]\nThus $E_*=\\Theta(s)$ with absolute constants. At $t=0$ and $t=1$ the\nerror is zero, using respectively zero queries and one ordinary query.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Quantitative extensions of Araújo et al.'s phase obstruction for Liu, Wesołowski, Thompson, Gu and Pira's uncontrolled fractional-evolution question",
+      "toolchain": null,
+      "version": 3,
+      "work": "liu-wesolowski-2026-ordinary-fractional-evolution"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:liu-wesolowski-2026-ordinary-fractional-evolution:3:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "42aeb4e95344fb1ea9d2042d02ff1a5589faaacb",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Quantum/QuantumChannels/FractionalEvolutionPhaseObstruction.lean"
+      },
+      "lineage": "collected:liu-wesolowski-2026-ordinary-fractional-evolution:s5",
+      "macros": {
+        "\\A": "\\mathcal A",
+        "\\E": "\\mathcal E",
+        "\\bra": "\\langle #1\\rvert",
+        "\\id": "\\mathrm{id}",
+        "\\ket": "\\lvert #1\\rangle",
+        "\\spec": "\\operatorname{spec}",
+        "\\tr": "\\operatorname{Tr}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "liu-wesolowski-2026-ordinary-fractional-evolution",
+      "scope": "in_scope",
+      "statement": "Fix $d\\geq2$ and $0<\\delta<\\pi$. Let\n$f:[\\delta,2\\pi)\\to\\mathbb R$ be continuously differentiable, with the\none-sided interpretation at $\\delta$. The target channel\n$\\E_{e^{if(H)}}$ admits arbitrarily accurate uniform approximation from\nordinary queries, without an oracle-dependent auxiliary input, if and only if\n\\[\n f(\\theta)=m\\theta+b\\quad(\\delta\\leq\\theta<2\\pi)\n \\quad\\text{for some }m\\in\\mathbb Z,\\ b\\in\\mathbb R.\n\\]\nFor these functions, $|m|$ signed queries implement the target exactly.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Quantitative extensions of Araújo et al.'s phase obstruction for Liu, Wesołowski, Thompson, Gu and Pira's uncontrolled fractional-evolution question",
+      "toolchain": null,
+      "version": 3,
+      "work": "liu-wesolowski-2026-ordinary-fractional-evolution"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "arithmetic": "Gaussian rational pairs of Python Fraction; exact, without rounding",
+  "coefficient_identity": "Y=[[0,-i],[i,0]]; Y^*Y=I_2",
+  "finite_circuits": {
+    "cases": 93,
+    "channel_basis_inputs_per_case": 4,
+    "gate_family": "slot-dependent exact 3/5,4/5 plane rotations and cyclic permutations",
+    "query_counts": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "sign_words": "all at each listed query count",
+    "verified_identity": "A(-U)=(-1)^N A(U); initialized full-output channels coincide",
+    "workspace_dimensions": [
+      1,
+      2,
+      3
+    ]
+  },
+  "fixed_witness": {
+    "delta": "1/2",
+    "dimension": 2,
+    "incompatible_requested_uniform_error": "1/4",
+    "normalized_orthogonal_target_projectors": true,
+    "t": "1/2",
+    "trace_norm_separation": "2"
+  },
+  "pi_certificate": {
+    "analytic_implication": "alternating arctan series at 1 gives 3 < pi < 4",
+    "arctan_lower_partial_sum": "33976/45045",
+    "comparison": "33976/45045 > 3/4"
+  },
+  "proof_scope": "Finite checks for the fixed witness and listed circuits; the all-circuit and all-t conclusions have written proofs in note.tex.",
+  "status": "pass"
+}

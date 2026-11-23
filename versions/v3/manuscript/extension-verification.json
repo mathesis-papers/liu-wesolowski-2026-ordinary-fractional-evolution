@@ -1,0 +1,56 @@
+{
+  "arithmetic": "Exact Gaussian rational pairs and rational arithmetic; Python standard library",
+  "gap_examples_in_units_of_pi": [
+    "1/8",
+    "1/2",
+    "3/4",
+    "7/8"
+  ],
+  "ordered_circuits": {
+    "cases": 90,
+    "gate_family": "Exact 3/5,4/5 plane rotations and cyclic permutations",
+    "identity": "A(-U)=(-1)^N A(U)",
+    "query_counts": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "sign_words": "all at each listed query count",
+    "system_dimensions": [
+      2,
+      3,
+      4
+    ],
+    "workspace_dimensions": [
+      1,
+      2
+    ]
+  },
+  "polynomial_examples": {
+    "affine_integer_slopes": [
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3
+    ],
+    "quadratic_finite_difference": "2*h*(x-y)",
+    "triples": 27
+  },
+  "proof_scope": "Finite matrix and polynomial identities only; all-parameter bounds and the C1 classification have written proofs in note.tex.",
+  "spectral_identity": "H+ entries delta and delta+pi; H- entries swapped; delta+pi<2*pi",
+  "square_root_projectors": "Orthogonal rank-one targets; their sum is the first-two-coordinate projector",
+  "square_root_pure_output_bound": {
+    "lower_bound": "sqrt(2)",
+    "squared_lower_bound": "2"
+  },
+  "status": "pass",
+  "system_dimensions": [
+    2,
+    3,
+    4
+  ]
+}

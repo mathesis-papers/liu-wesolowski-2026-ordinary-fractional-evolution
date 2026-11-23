@@ -1,0 +1,361 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,array,booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks,breaklinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\spec}{\operatorname{spec}}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\E}{\mathcal E}
+\newcommand{\A}{\mathcal A}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\bra}[1]{\langle #1\rvert}
+\title{Quantitative extensions of Ara\'ujo et al.'s phase obstruction
+for Liu, Weso\l{}owski, Thompson, Gu and Pira's
+uncontrolled fractional-evolution question}
+\author{Haobo Ma\\
+\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\
+\small National University of Singapore\\
+\small ChronoAI Pte Ltd, Singapore}
+\date{16 November 2026\\[3pt]
+\small Creative Commons Attribution 4.0 International (CC BY 4.0)}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending Ara\'ujo, Feix, Costa and Brukner's global-phase argument
+(2014), we answer negatively the question in Liu, Weso\l{}owski, Thompson,
+Gu and Pira, \emph{Optimal query complexity for fractional quantum evolution},
+arXiv:2610.01940v1 (1 October 2026), Section V, page 7, unnumbered
+``Uncontrolled access'' paragraph, with its prescribed branch and uniform
+channel criterion.
+For $0<t<1$, $0<\delta<\pi$ and every dimension $d\geq2$, ordinary
+queries have an unhalved diamond-error floor $\sin(\pi t)$, independent
+of their number. Retaining a pure full output strengthens the bound to
+$2\sin(\frac\pi2\min\{t,1-t\})$.
+The same argument gives the endpoint order of the best attainable error
+and classifies continuously differentiable phase functions on this branch:
+arbitrarily accurate ordinary-access implementation is possible exactly
+for integer powers, up to a constant phase.
+\end{abstract}
+
+\section{Question, prior results and conventions}
+Controlled access makes a global phase measurable as a relative phase;
+ordinary access does not. Ara\'ujo et al.~\cite[p.~2]{araujo} use this
+distinction to obstruct universal control of an unknown operation.
+Sheridan, Maslov and Mosca~\cite[Section II.A and Appendix A]{sheridan}
+develop fractional evolution with controlled queries and explain the
+different, eigenphase-relative target available from a reference register.
+Gavorov\'a, Seidel and Touati~\cite[Section IV.C, Corollary 1]{gavorova}
+prove an all-domain root impossibility by topological methods.
+These results supply the phase-obstruction principle and its broader context.
+The point here is an explicit admissible pair on the promised branch,
+its quantitative separation, and consequences for other phase functions.
+
+In Section V of~\cite{liu}, the source states:
+``It is unclear whether the matching upper bound survives without controlled
+access.'' The matching bound is $O(\delta^{-1}\log(1/\varepsilon))$.
+This is a question, not a claimed ordinary-access theorem. We answer it with
+Definitions 1--3 and Appendix B of that source, replacing controlled slots
+by ordinary slots. Its controlled-access results are separate.
+
+Let $S=\mathbb C^d$, let $A=\mathbb C^r$ with $1\leq r<\infty$,
+and fix a unit vector $\ket0_A$. Write
+$J\ket\psi=\ket0_A\otimes\ket\psi$.
+For Hermitian $H$ with $\spec(H)\subset[\delta,2\pi)$, put
+$U=e^{iH}$ and $U^t=e^{itH}$. The half-open branch uniquely fixes $H$.
+A fixed ordinary-query circuit has the form
+\begin{equation}\label{eq:circuit}
+ \A_U=W_N(I_A\otimes U^{\sigma_N})W_{N-1}\cdots
+ W_1(I_A\otimes U^{\sigma_1})W_0,
+ \qquad \sigma_j\in\{-1,+1\},
+\end{equation}
+where the $W_j$ are unitary and independent of $U$; $N=0$ is allowed.
+Negative signs mean adjoint queries. Gates may depend on $t,\delta$ and
+the requested accuracy.
+For an isometry $V$, put $\E_V(X)=VXV^\dagger$. Our diamond norm is
+unhalved: for differences of channels from $S$, with $R=\mathbb C^d$,
+\[
+ \|\Phi\|_\diamond
+ =\sup_{\rho\geq0,\,\tr\rho=1}
+   \|(\Phi\otimes\id_R)(\rho)\|_1,
+ \qquad \rho\text{ on }S\otimes R.
+\]
+The error of a circuit is
+\begin{equation}\label{eq:error}
+ e(\A;t,\delta)=
+ \sup_{\substack{H=H^\dagger\\\spec(H)\subset[\delta,2\pi)}}
+ \|\E_{\A_{e^{iH}}J}-\E_{Je^{itH}}\|_\diamond.
+\end{equation}
+Thus the comparison includes the initialized workspace, as in Appendix B
+of~\cite{liu}; it does not merely compare a reduced system output.
+
+\section{A promised phase pair}
+\begin{theorem}\label{thm:floor}
+Fix $0<t<1$, $0<\delta<\pi$ and $d\geq2$.
+Every circuit~\eqref{eq:circuit} satisfies
+\[
+ e(\A;t,\delta)\geq\sin(\pi t).
+\]
+The same lower bound holds for a deterministic algorithm built from ordinary
+oracle channels, oracle-independent quantum operations and classical
+conditioning, when its system output is compared to $\E_{e^{itH}}$.
+No oracle-dependent auxiliary input is supplied in either model.
+\end{theorem}
+\begin{proof}
+First take $d=2$ and use
+\[
+ H_+=\operatorname{diag}(\delta,\delta+\pi),\qquad
+ H_-=\operatorname{diag}(\delta+\pi,\delta).
+\]
+Both spectra lie in $[\delta,2\pi)$ because $\delta+\pi<2\pi$.
+Their exponentials obey $U_-=-U_+$.
+For either sign, $(-U_+)^{\sigma_j}=-U_+^{\sigma_j}$.
+Induction on the ordered product in~\eqref{eq:circuit} therefore gives
+\begin{equation}\label{eq:phase}
+ \A_{U_-}=(-1)^N\A_{U_+},\qquad
+ \E_{\A_{U_-}J}=\E_{\A_{U_+}J}.
+\end{equation}
+The base case is $\A_U=W_0$; each next slot contributes precisely one
+additional scalar $-1$, which commutes through its fixed gate.
+
+For $\ket+=(\ket0+\ket1)/\sqrt2$, let $\rho_+=\ket+\bra+$.
+The ideal system outputs are
+\[
+ R_t=\frac12\begin{pmatrix}1&e^{-i\pi t}\\e^{i\pi t}&1\end{pmatrix},
+ \qquad
+ S_t=\frac12\begin{pmatrix}1&e^{i\pi t}\\e^{-i\pi t}&1\end{pmatrix}.
+\]
+Hence
+\[
+ D_t=R_t-S_t
+ =\begin{pmatrix}0&-i\sin(\pi t)\\i\sin(\pi t)&0\end{pmatrix},
+ \quad D_t^\dagger D_t=\sin^2(\pi t)I_2,
+ \quad \|D_t\|_1=2\sin(\pi t).
+\]
+Isometric embedding by $J$ and tensoring a fixed reference state preserve
+trace norm. On this input let $X$ be the common implemented output from
+\eqref{eq:phase}, and let $e_+$ and $e_-$ be the two diamond errors. Then
+\[
+ 2\sin(\pi t)\leq
+ \|JR_tJ^\dagger-X\|_1+\|X-JS_tJ^\dagger\|_1
+ \leq e_++e_-.
+\]
+Here the input can be tensored with a fixed reference state in the diamond
+supremum. Thus one error is at least $\sin(\pi t)$.
+
+For $d>2$, append the entry $\delta$ to $H_+$ and $\delta+\pi$ to $H_-$
+in every extra coordinate. The sign relation persists, and the same
+input is supported on the first two coordinates.
+
+For the more general model, the oracle channels for $U_+$ and $U_-$
+coincide, as do those for their adjoints. Substituting equal channels
+at every slot leaves all outcome probabilities and conditional operations
+unchanged. Thus the final deterministic output channels coincide, even
+with discarded workspace or classical randomness. The same triangle
+inequality on the system output proves the claim.
+\end{proof}
+
+\begin{corollary}\label{cor:pure}
+In the full-output unitary-circuit model~\eqref{eq:circuit}, put
+$s=\min\{t,1-t\}$. Under Theorem~\ref{thm:floor}'s hypotheses,
+\[
+ e(\A;t,\delta)\geq \sqrt{2-2|\cos(\pi t)|}
+ =2\sin(\pi s/2).
+\]
+In particular the square-root error is at least $\sqrt2$.
+\end{corollary}
+\begin{proof}
+The two ideal full outputs on $\ket+$ are unit vectors $p,q$ with
+$|\langle p,q\rangle|=|\cos(\pi t)|=:c$.
+The common implemented state is also pure, say $\ket x\bra x$.
+The nonzero eigenvalues of $\ket p\bra p+\ket q\bra q$ are $1+c$ and
+$1-c$, as follows from the Gram matrix of $p,q$.
+Therefore
+$|\langle x,p\rangle|^2+|\langle x,q\rangle|^2\leq1+c$,
+so one squared overlap is at most $(1+c)/2$.
+For unit vectors $v,w$, the possible nonzero eigenvalues of
+$\ket v\bra v-\ket w\bra w$ are
+$\pm\sqrt{1-|\langle v,w\rangle|^2}$.
+The corresponding trace-norm error is consequently at least
+$2\sqrt{(1-c)/2}$, and a diamond error is no smaller.
+Finally $|\cos(\pi t)|=\cos(\pi s)$ for $0<t<1$.
+\end{proof}
+
+\begin{corollary}\label{cor:source}
+The ordinary-access question in Section V of~\cite{liu} has answer no:
+there is no arbitrarily accurate uniform implementation, and hence no
+matching uniform query upper bound. At $d=2$, $t=\delta=1/2$ and
+$\varepsilon=1/4$, no finite ordinary-query circuit succeeds.
+\end{corollary}
+\begin{proof}
+The source's range $0<\delta<1$ is contained in $0<\delta<\pi$.
+At $t=1/2$, Theorem~\ref{thm:floor} already gives error at least $1>1/4$,
+independently of query count. The stronger bound in Corollary~\ref{cor:pure}
+uses the full-output purity in addition.
+\end{proof}
+
+\section{Endpoint dependence and other phase functions}
+\begin{corollary}\label{cor:endpoint}
+Let $E_*(t,\delta,d)$ be the infimum of~\eqref{eq:error} over all finite
+circuits, all finite workspaces and all query counts. If
+$d\geq2$, $0<\delta<\pi$ and $0<t<1$, then
+\[
+ 2\sin(\pi s/2)\leq E_*(t,\delta,d)
+ \leq\min\{2,(2\pi-\delta)s\},\qquad s=\min\{t,1-t\}.
+\]
+Thus $E_*=\Theta(s)$ with absolute constants. At $t=0$ and $t=1$ the
+error is zero, using respectively zero queries and one ordinary query.
+\end{corollary}
+\begin{proof}
+The lower bound is Corollary~\ref{cor:pure}. For the upper bound put
+$b=(\delta+2\pi)/2$. Every promised $H$ obeys
+$\|H-bI\|_{\rm op}\leq(2\pi-\delta)/2$.
+For $t\leq1/2$, the identity circuit approximates $e^{itH}$ after a
+scalar phase with operator-norm error at most
+$t\|H-bI\|_{\rm op}$, by $|e^{iu}-1|\leq|u|$ on each eigenvalue.
+For $t\geq1/2$, the one-query circuit $U$ gives the same estimate with
+$1-t$. For two isometries $V,W$, adding and subtracting $W\rho V^\dagger$
+in their channel difference gives
+$\|\E_V-\E_W\|_\diamond\leq2\|V-W\|_{\rm op}$;
+the bound also holds after a reference tensor factor. Channel distance
+is at most $2$. Finally $2s\leq2\sin(\pi s/2)\leq\pi s$ for
+$0\leq s\leq1/2$, which proves the stated order.
+\end{proof}
+The upper-bound observation is already stated in~\cite[Section V,
+``Dependence on $t$'']{liu}. The corollary combines it with the ordinary-access
+lower bound. It concerns the best error, not the controlled-access
+query-complexity conjecture in that paragraph.
+
+\begin{corollary}\label{cor:functions}
+Fix $d\geq2$ and $0<\delta<\pi$. Let
+$f:[\delta,2\pi)\to\mathbb R$ be continuously differentiable, with the
+one-sided interpretation at $\delta$. The target channel
+$\E_{e^{if(H)}}$ admits arbitrarily accurate uniform approximation from
+ordinary queries, without an oracle-dependent auxiliary input, if and only if
+\[
+ f(\theta)=m\theta+b\quad(\delta\leq\theta<2\pi)
+ \quad\text{for some }m\in\mathbb Z,\ b\in\mathbb R.
+\]
+For these functions, $|m|$ signed queries implement the target exactly.
+\end{corollary}
+\begin{proof}
+Any two admissible oracles differing by a scalar phase supply the same
+ordinary query channels. If arbitrarily small uniform errors are possible,
+their target channels must coincide: their diamond separation is bounded
+by twice every such error.
+
+Choose any $x,y\in(\delta,2\pi)$. For every sufficiently small real $h$,
+both $H=\operatorname{diag}(x,y)$ and $H+hI$ are admissible, and their
+oracles differ by $e^{ih}$. Applying equality of target channels to the
+off-diagonal matrix unit gives
+\[
+ e^{i(f(x+h)-f(y+h))}=e^{i(f(x)-f(y))}.
+\]
+Differentiating at $h=0$ yields $f'(x)=f'(y)$.
+Consequently $f(\theta)=a\theta+b$ on the open interval, and continuity
+extends this to $\delta$.
+Apply target-channel equality also to the sign pair in
+Theorem~\ref{thm:floor}. Its off-diagonal entries are $e^{-ia\pi}$ and
+$e^{ia\pi}$, so $e^{2\pi ia}=1$ and $a\in\mathbb Z$.
+For $d>2$ append repeated admissible eigenvalues to these two-dimensional
+constructions; the same matrix unit gives both conclusions.
+Conversely, $e^{if(H)}=e^{ib}U^m$ induces the channel of $U^m$.
+Use $m$ forward queries when $m>0$, $-m$ adjoint queries when $m<0$,
+and no queries when $m=0$.
+\end{proof}
+This ordinary-access classification is not asserted in the posing source.
+It supplies an obstruction for analytic phase functions as a special case,
+but does not determine their controlled-access complexity.
+
+\paragraph{Resources and boundary cases.}
+The strict endpoint $\delta<\pi$ matters to the displayed sign pair:
+at $\delta=\pi$ its other eigenvalue is $2\pi$, outside the promise.
+No impossibility for $\delta\geq\pi$ is inferred here.
+For $d=1$ all target channels are the identity, so the restriction $d\geq2$
+is necessary. An oracle-dependent reference register can change the target:
+Sheridan et al.'s construction uses an eigenphase-relative power, not this
+uniform prescribed-branch map~\cite[Appendix A]{sheridan}.
+Controlled queries also change the information supplied: the controlled
+versions of $U$ and $-U$ are not equal channels. For the fixed pair
+$\operatorname{diag}(i,-i)$ and its negative, a superposed control and
+the first basis vector yield orthogonal outputs. Thus the ordinary-channel
+argument leaves the controlled results intact.
+
+\section{Source coverage and mathematical verification}
+All source locators in the table refer to~\cite{liu}; Section V is on page 7.
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}
+\toprule
+Source item & Coverage\\
+\midrule
+Uncontrolled-access question & Answered: no. Theorem~\ref{thm:floor} and
+Corollary~\ref{cor:source}; all source gaps and all finite query counts.\\[3pt]
+Endpoint-error observation in ``Dependence on $t$'' & Reproved; prior
+observation Liu et al., 2026. Corollary~\ref{cor:endpoint} adds a lower bound
+of the same order for ordinary access.\\[3pt]
+Controlled adaptive-in-$t$ conjecture & Not covered. An error floor is
+not a controlled query-complexity estimate.\\[3pt]
+``Other spectral transformations'' & The controlled analytic-function
+complexity conjecture is not covered. The ordinary-access classification
+in Corollary~\ref{cor:functions} is not posed; proved here.\\[3pt]
+``Beyond the worst case'' & Not covered. Neither an optimal Haar-average
+complexity nor a typical-oracle error follows from this pair.\\[3pt]
+Theorems 1--4; Appendix C & Controlled-access results not reassessed;
+the source's lower-bound implication for ordinary access is compatible
+with an error floor.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The global-phase step is reproved from the principle of
+Ara\'ujo et al.~\cite{araujo}; the promised pair and its separation make
+the present application explicit.
+Theorem~\ref{thm:floor} and Corollaries~\ref{cor:pure}--\ref{cor:functions}
+have written proofs above.
+The pinned Lean declaration
+\begin{center}\footnotesize
+\texttt{Trureturing.OpenProblems.FractionalEvolutionPhase.result}
+\end{center}
+states the negation of the uniform ordinary-query upper-bound assertion,
+using $d=2$, $t=\delta=1/2$, $\varepsilon=1/4$, arbitrary finite nonzero
+workspace and the full-output unhalved criterion.
+Its concrete logarithms are
+$\operatorname{diag}(\pi/2,3\pi/2)$ and the swapped diagonal.
+It does not state the parameterized error floor, the stronger pure-output
+bound, the enlarged gap range or the phase-function classification.
+\href{https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Quantum/QuantumChannels/FractionalEvolutionPhaseObstruction.lean}{Pinned Lean source for this declaration}.
+The exact-arithmetic checker supplies finite matrix identities for the
+square-root witness and ordered circuits. Those finite checks supplement,
+rather than replace, the universal written arguments.
+
+\begin{thebibliography}{9}
+\bibitem{liu}
+A. Yuezhang Liu, A. Weso\l{}owski, J. Thompson, M. Gu and L. Pira,
+\emph{Optimal query complexity for fractional quantum evolution},
+\href{https://arxiv.org/abs/2610.01940v1}{arXiv:2610.01940v1} (2026).
+Definitions 1--3, Section V (p.~7) and Appendix B.
+\bibitem{araujo}
+M. Ara\'ujo, A. Feix, F. Costa and \v C. Brukner,
+\emph{Quantum circuits cannot control unknown operations},
+New Journal of Physics \textbf{16}, 093026 (2014),
+\href{https://doi.org/10.1088/1367-2630/16/9/093026}{doi:10.1088/1367-2630/16/9/093026}.
+Preprint: \href{https://arxiv.org/abs/1309.7976v2}{arXiv:1309.7976v2}.
+\bibitem{sheridan}
+L. Sheridan, D. Maslov and M. Mosca,
+\emph{Approximating fractional time quantum evolution},
+Journal of Physics A: Mathematical and Theoretical \textbf{42}, 185302 (2009),
+\href{https://doi.org/10.1088/1751-8113/42/18/185302}{doi:10.1088/1751-8113/42/18/185302}.
+\href{https://arxiv.org/abs/0810.3843v2}{arXiv:0810.3843v2},
+Section II.A and Appendix A.
+\bibitem{gavorova}
+Z. Gavorov\'a, M. Seidel and Y. Touati,
+\emph{Topological obstructions to quantum computation with unitary oracles},
+Physical Review A \textbf{109}, 032625 (2024),
+\href{https://doi.org/10.1103/PhysRevA.109.032625}{doi:10.1103/PhysRevA.109.032625}.
+\href{https://arxiv.org/abs/2011.10031v3}{arXiv:2011.10031v3},
+Section IV.C, Corollary 1.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,79 @@
+{
+  "problem_ids": ["liu-wesolowski-2026-ordinary-fractional-evolution"],
+  "source": "https://arxiv.org/abs/2610.01940v1",
+  "source_items": [
+    {
+      "locator": "Section V, page 7, unnumbered Uncontrolled access paragraph",
+      "source_quote": "It is unclear whether the matching upper bound survives without controlled access.",
+      "source_kind": "question",
+      "status": "Answered: no",
+      "support": "Theorem 1 and Corollary 3 of note.tex",
+      "scope": "All 0<t<1, 0<delta<pi and d>=2; unhalved diamond error at least sin(pi*t), for arbitrary finite ordinary-query circuits and deterministic ordinary-channel algorithms without an oracle-dependent auxiliary input."
+    },
+    {
+      "locator": "Section V, page 7, Dependence on t: identity/one-query endpoint estimate",
+      "source_kind": "observation",
+      "status": "Reproved; prior proof Liu et al., 2026",
+      "support": "Corollary 4",
+      "scope": "Endpoint upper estimate combined with the lower bound to give best full-output ordinary-circuit error Theta(min(t,1-t)); this is an error statement, not a controlled query-complexity law."
+    },
+    {
+      "locator": "Section V, page 7, Dependence on t: adaptive-in-t controlled query-complexity conjecture",
+      "source_kind": "conjecture",
+      "status": "not covered",
+      "scope": "The source's controlled-access conjecture Q=Theta(delta^-1 log(sin(pi*t)/epsilon)) is not determined."
+    },
+    {
+      "locator": "Section V, page 7, Other spectral transformations",
+      "source_kind": "conjecture",
+      "status": "not covered",
+      "scope": "The source's controlled-access analytic-phase complexity conjecture is not determined; it is not refuted by changing the oracle model."
+    },
+    {
+      "locator": "Ordinary-access counterpart of Section V, Other spectral transformations",
+      "source_kind": "not posed in the source",
+      "status": "not posed; proved",
+      "support": "Corollary 5",
+      "scope": "For d>=2, 0<delta<pi and C1 real f on [delta,2*pi), arbitrarily accurate ordinary-access implementation is possible exactly when f(theta)=m*theta+b, m integer. No additional problem ID is assigned."
+    },
+    {
+      "locator": "Section V, page 7, Beyond the worst case",
+      "source_kind": "question",
+      "status": "not covered",
+      "scope": "No Haar-average or typical-oracle query-complexity conclusion."
+    },
+    {
+      "locator": "Theorems 1–4 and Appendix C",
+      "source_kind": "theorems",
+      "status": "not covered",
+      "scope": "Controlled-query upper and lower bounds are not reassessed. The lower-bound implication for ordinary access remains compatible with the error floor."
+    },
+    {
+      "locator": "Section I, discussion citing Sheridan et al.; Sheridan et al. Section II.A and Appendix A",
+      "source_kind": "prior construction",
+      "status": "prior proof cited",
+      "scope": "Controlled access and an eigenphase-relative target use information or a target convention different from the uniform prescribed-branch ordinary-access problem."
+    },
+    {
+      "locator": "Section I, all-domain root obstruction; Gavorová et al. Section IV.C, Corollary 1",
+      "source_kind": "prior theorem",
+      "status": "prior proof cited",
+      "scope": "An all-U(d) root obstruction does not by itself settle the restricted promised domain. The present sign pair is explicitly admissible."
+    }
+  ],
+  "additional_written_results": [
+    {"statement": "Pure full-output error at least 2*sin(pi*min(t,1-t)/2)", "support": "Corollary 2", "source_status": "not posed; proved"},
+    {"statement": "All d>=2 and 0<delta<pi are covered by the sign pair", "support": "Theorem 1", "source_status": "not posed; proved"},
+    {"statement": "The floor survives intermediate quantum operations, classical conditioning and discarded workspace", "support": "Theorem 1", "source_status": "not posed; proved"}
+  ],
+  "verification": {
+    "written": "All-parameter sign-pair proof, pure-state bound, endpoint comparison and C1 phase-function classification.",
+    "finite": "verify.py and verify_extensions.py check only the exact listed matrix and polynomial instances.",
+    "formal": {
+      "declaration": "Trureturing.OpenProblems.FractionalEvolutionPhase.result",
+      "statement": "Not Trureturing.OpenProblems.FractionalEvolutionPhase.claim",
+      "scope": "Fixed d=2, t=delta=1/2, epsilon=1/4 witness with all finite nonzero workspaces and signed ordinary circuits; concrete phases pi/2 and 3*pi/2. No all-t bound or phase-function classification is a statement of this declaration.",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Quantum/QuantumChannels/FractionalEvolutionPhaseObstruction.lean"
+    }
+  }
+}
