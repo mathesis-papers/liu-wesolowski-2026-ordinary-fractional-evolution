@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24414716",
     "current_version": 3,
     "doi": "10.5281/zenodo.24414717",
+    "kind": "note",
     "lean_source": {
       "revision": "42aeb4e95344fb1ea9d2042d02ff1a5589faaacb",
       "url": "https://github.com/the-omega-institute/trureturing/blob/42aeb4e95344fb1ea9d2042d02ff1a5589faaacb/D5/S3/Quantum/QuantumChannels/FractionalEvolutionPhaseObstruction.lean"
@@ -55,10 +56,12 @@
     "title": "Quantitative extensions of Araújo et al.'s phase obstruction for Liu, Wesołowski, Thompson, Gu and Pira's uncontrolled fractional-evolution question",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-23T16:38:19.843660674Z",
         "revision": "3",
-        "version": 3
+        "version": 3,
+        "version_label": null
       }
     ],
     "work": "liu-wesolowski-2026-ordinary-fractional-evolution"
